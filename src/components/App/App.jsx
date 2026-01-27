@@ -30,7 +30,7 @@ export default function App() {
 			>
 				<Routes>
 					<Route path="/" element={<Layout />}>
-						<Route path="/" element={<HomePage />}></Route>
+						<Route index element={<HomePage />}></Route>
 
 						<Route path="/catalog" element={<CatalogPage />}></Route>
 
