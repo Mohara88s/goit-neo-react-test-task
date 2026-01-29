@@ -32,7 +32,7 @@ export default function LocationForm() {
 				className={styles.location_input}
 			/>
 			<svg
-				className={clsx(styles.svg__icon, isLocation && styles.active_icon)}
+				className={clsx(styles.svg__icon, isLocation && styles.active__icon)}
 				width="20"
 				height="20"
 			>

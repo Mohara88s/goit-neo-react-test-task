@@ -5,6 +5,7 @@
 @media screen and (min-width: 1440px) {
 	.filters__box {
 		width: 360px;
+		flex-shrink: 0;
 	}
 }
 
@@ -16,6 +17,7 @@
 	margin: 0;
 	width: 166px;
 	height: 56px;
+	font-family: var(--font-family);
 	font-weight: 500;
 	font-size: 16px;
 	line-height: 1.5;

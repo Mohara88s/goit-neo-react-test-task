@@ -1,0 +1,115 @@
+.card {
+	width: 888px;
+	/* height: 368px; */
+	padding: 24px;
+	background-color: var(--white);
+	border: 1px solid var(--gray-light);
+	border-radius: 20px;
+	display: flex;
+	gap: 24px;
+}
+.card__img {
+	border-radius: 10px;
+	width: 292px;
+	/* height: 320px; */
+	object-fit: cover;
+	object-position: center;
+}
+.card__info {
+	display: flex;
+	flex-direction: column;
+	width: 524px;
+}
+.card__namebox {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 8px;
+}
+.card__name {
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 1.33;
+	color: var(--main);
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-right: 20px;
+}
+.card__pricebox {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+.card__price {
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 1.33;
+	color: var(--main);
+}
+.favorite__icon {
+	fill: var(--main);
+	transition: fill var(--trans-norm);
+}
+
+.active__favorite__icon {
+	fill: var(--button);
+}
+.card__ratebox {
+	display: flex;
+	align-items: center;
+	margin-bottom: 24px;
+}
+.card__ratebox__icon {
+	margin-right: 4px;
+}
+.card__ratebox__info {
+	font-weight: 400;
+	color: var(--main);
+	margin-right: 16px;
+}
+.card__description {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	font-weight: 400;
+	margin-bottom: 24px;
+}
+
+.features__list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	margin-bottom: 24px;
+}
+
+.features__item {
+	border-radius: 100px;
+	padding: 12px 18px;
+	background-color: var(--badges);
+	display: flex;
+	gap: 8px;
+	align-items: center;
+	color: var(--main);
+	fill: var(--main);
+}
+
+.card__link {
+	border-radius: 200px;
+	padding: 16px 40px;
+	width: 166px;
+	height: 56px;
+	background-color: var(--button);
+	font-family: var(--font-family);
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.5;
+	letter-spacing: -0.01em;
+	color: var(--white);
+	transition: background-color;
+	user-select: none;
+}
+.card__link:hover,
+.card__link:focus {
+	background-color: var(--button-hover);
+}

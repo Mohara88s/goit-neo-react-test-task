@@ -25,6 +25,7 @@
 .hero__btn {
 	margin: 0;
 	padding: 16px 48px;
+	font-family: var(--font-family);
 	font-weight: 500;
 	font-size: 16px;
 	line-height: 1.5;
@@ -32,6 +33,7 @@
 	background-color: var(--button);
 	border-radius: 200px;
 	transition: background-color;
+	user-select: none;
 }
 
 .hero__btn:hover,

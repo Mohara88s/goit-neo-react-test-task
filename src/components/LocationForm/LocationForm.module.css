@@ -30,7 +30,7 @@
 	transition: fill var(--trans-norm);
 }
 
-.active_icon {
+.active__icon {
 	fill: var(--main);
 }
 
