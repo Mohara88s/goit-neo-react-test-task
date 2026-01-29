@@ -1,7 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { campersReducer } from './campers/slice';
-// import { filtersReducer } from './filters/slice';
-// import { authReducer } from './auth/slice';
+import { filtersReducer } from './filters/slice';
 
 import {
     persistStore,
@@ -16,17 +15,15 @@ import {
 import storage from 'redux-persist/lib/storage';
 
 // Persisting token field from auth slice to localstorage
-const authPersistConfig = {
-    key: 'auth',
+const filtersPersistConfig = {
+    key: "filters",
     storage,
-    whitelist: ['token'],
 };
 
 export const store = configureStore({
     reducer: {
-        // auth: persistReducer(authPersistConfig, authReducer),
         campers: campersReducer,
-        // filters: filtersReducer,
+        filters: persistReducer(filtersPersistConfig, filtersReducer),
     },
     middleware: (getDefaultMiddleware) =>
         getDefaultMiddleware({
@@ -34,7 +31,7 @@ export const store = configureStore({
                 ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
             },
         }),
-    devTools: process.env.NODE_ENV === 'development',
+    devTools: import.meta.env.MODE === 'development',
 });
 
 export const persistor = persistStore(store);

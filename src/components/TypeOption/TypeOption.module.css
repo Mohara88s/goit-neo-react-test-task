@@ -1,0 +1,31 @@
+.checkbox_label {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid var(--gray-light);
+	border-radius: 12px;
+	height: 96px;
+}
+.checkbox_label.active {
+	border: 1px solid var(--button);
+}
+.visually_hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0, 0, 0, 0);
+	overflow: hidden;
+}
+
+.text {
+	color: var(--main);
+	letter-spacing: -0.01em;
+	text-align: center;
+}

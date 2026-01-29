@@ -11,19 +11,19 @@ import { Toaster } from "react-hot-toast";
 
 createRoot(document.getElementById("root")).render(
 	<StrictMode>
-		{/* <Provider store={store}>
-			<PersistGate loading={null} persistor={persistor}> */}
-		<BrowserRouter>
-			<App />
-			<Toaster
-				position="top-right"
-				reverseOrder={false}
-				toastOptions={{
-					duration: 3000,
-				}}
-			/>
-		</BrowserRouter>
-		{/* </PersistGate>
-		</Provider> */}
+		<Provider store={store}>
+			<PersistGate loading={null} persistor={persistor}>
+				<BrowserRouter>
+					<App />
+					<Toaster
+						position="top-right"
+						reverseOrder={false}
+						toastOptions={{
+							duration: 3000,
+						}}
+					/>
+				</BrowserRouter>
+			</PersistGate>
+		</Provider>
 	</StrictMode>,
 );

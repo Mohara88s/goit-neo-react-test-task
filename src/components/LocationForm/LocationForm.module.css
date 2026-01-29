@@ -1,0 +1,39 @@
+.location_form {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	position: relative;
+	margin-bottom: 40px;
+}
+.location_label {
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 1.5;
+	color: var(--gray);
+}
+.location_input {
+	border-radius: 12px;
+	padding: 16px 0 16px 48px;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 1.5;
+	background-color: var(--inputs);
+	border: none;
+	outline: none;
+}
+
+.svg__icon {
+	position: absolute;
+	bottom: 18px;
+	left: 20px;
+	fill: var(--gray);
+	transition: fill var(--trans-norm);
+}
+
+.active_icon {
+	fill: var(--main);
+}
+
+.location_input:focus + .svg__icon {
+	fill: var(--main);
+}
