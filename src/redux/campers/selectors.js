@@ -7,11 +7,11 @@ export const selectError = (state) => state.campers.error;
 
 export const selectFilteredCampers = createSelector(
     [selectCampers, selectAppliedFilters],
-    (campers, { locationFilter, equipment, type }) => {
+    (campers, { location, equipment, type }) => {
         return campers
             .filter((camper) => {
-                const locationCoincidence = locationFilter
-                    ? locationFilter
+                const locationCoincidence = location
+                    ? location
                         .toLowerCase()
                         .split(',')
                         .every(part => camper.location.toLowerCase().includes(part.trim().toLowerCase()))
