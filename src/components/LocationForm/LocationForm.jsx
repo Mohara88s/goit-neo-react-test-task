@@ -4,7 +4,7 @@ import { changeLocation } from "../../redux/filters/slice";
 import { selectLocation } from "../../redux/filters/selectors";
 import icons from "../../assets/icons/sprite.svg";
 import clsx from "clsx";
-import styles from "./LocationForm.module.css";
+import style from "./LocationForm.module.css";
 
 export default function LocationForm() {
 	const dispatch = useDispatch();
@@ -18,8 +18,8 @@ export default function LocationForm() {
 	const isLocation = location && location.trim().length > 0;
 
 	return (
-		<form className={styles.location_form} autoComplete="off">
-			<label htmlFor={locationFieldId} className={styles.location_label}>
+		<form className={style.location_form} autoComplete="off">
+			<label htmlFor={locationFieldId} className={style.location_label}>
 				Location
 			</label>
 			<input
@@ -29,10 +29,10 @@ export default function LocationForm() {
 				id={locationFieldId}
 				onChange={handleLocationChange}
 				value={location}
-				className={styles.location_input}
+				className={style.location_input}
 			/>
 			<svg
-				className={clsx(styles.svg__icon, isLocation && styles.active__icon)}
+				className={clsx(style.svg__icon, isLocation && style.active__icon)}
 				width="20"
 				height="20"
 			>

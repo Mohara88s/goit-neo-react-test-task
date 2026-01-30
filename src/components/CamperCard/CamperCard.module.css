@@ -1,6 +1,5 @@
 .card {
 	width: 888px;
-	/* height: 368px; */
 	padding: 24px;
 	background-color: var(--white);
 	border: 1px solid var(--gray-light);
@@ -8,6 +7,7 @@
 	display: flex;
 	gap: 24px;
 }
+
 .card__img {
 	border-radius: 10px;
 	width: 292px;
@@ -92,6 +92,7 @@
 	align-items: center;
 	color: var(--main);
 	fill: var(--main);
+	mix-blend-mode: multiply;
 }
 
 .card__link {

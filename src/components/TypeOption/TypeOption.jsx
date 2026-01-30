@@ -3,7 +3,7 @@ import { changeType } from "../../redux/filters/slice";
 import { selectType } from "../../redux/filters/selectors";
 import icons from "../../assets/icons/sprite.svg";
 import clsx from "clsx";
-import styles from "./TypeOption.module.css";
+import style from "./TypeOption.module.css";
 
 export default function TypeOption({ type: { value, icon, label } }) {
 	const dispatch = useDispatch();
@@ -16,17 +16,17 @@ export default function TypeOption({ type: { value, icon, label } }) {
 	};
 
 	return (
-		<label className={clsx(styles.checkbox_label, isChecked && styles.active)}>
+		<label className={clsx(style.checkbox_label, isChecked && style.active)}>
 			<input
 				type="checkbox"
-				className={styles.visually_hidden}
+				className={style.visually_hidden}
 				checked={isChecked}
 				onChange={handleChange}
 			/>
-			<svg className={styles.icon} width="32" height="32">
+			<svg className={style.icon} width="32" height="32">
 				<use href={`${icons}#${icon}`} />
 			</svg>
-			<span className={styles.text}>{label}</span>
+			<span className={style.text}>{label}</span>
 		</label>
 	);
 }

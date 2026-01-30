@@ -1,15 +1,15 @@
 import { lazy, Suspense } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import { ClipLoader } from "react-spinners";
 
 const Layout = lazy(() => import("../../layouts/Layout/Layout"));
 const HomePage = lazy(() => import("../../pages/HomePage/HomePage"));
 const CatalogPage = lazy(() => import("../../pages/CatalogPage/CatalogPage"));
-// const CamperDetailsPage = lazy(
-// 	() => import("../CamperDetailsPage/CamperDetailsPage"),
-// );
-// const Reviews = lazy(() => import("../Reviews/Reviews"));
-// const Features = lazy(() => import("../Features/Features"));
+const CamperDetailsPage = lazy(
+	() => import("../../pages/CamperDetailsPage/CamperDetailsPage"),
+);
+const Features = lazy(() => import("../Features/Features"));
+const Reviews = lazy(() => import("../Reviews/Reviews"));
 
 const NotFoundPage = lazy(
 	() => import("../../pages/NotFoundPage/NotFoundPage"),
@@ -34,10 +34,11 @@ export default function App() {
 
 						<Route path="/catalog" element={<CatalogPage />}></Route>
 
-						{/* <Route path="/catalog/:id" element={<CamperDetailsPage />}>
+						<Route path="/catalog/:id" element={<CamperDetailsPage />}>
+							<Route index element={<Navigate to="features" replace />} />
 							<Route path="features" element={<Features />} />
 							<Route path="reviews" element={<Reviews />} />
-						</Route> */}
+						</Route>
 
 						<Route path="*" element={<NotFoundPage />}></Route>
 					</Route>

@@ -6,7 +6,7 @@ import style from "./CatalogPage.module.css";
 
 export default function CatalogPage() {
 	return (
-		<section className={style.catalog__section}>
+		<section className={style.section}>
 			<Container>
 				<div className={style.catalog__box}>
 					<FiltersBox />
