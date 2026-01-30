@@ -17,14 +17,11 @@
 	margin-right: 4px;
 }
 .ratebox__rate {
-	font-weight: 400;
 	color: var(--main);
 	margin-right: 16px;
 	text-decoration: underline;
-	text-decoration-skip-ink: none;
 }
 .ratebox__info {
-	font-weight: 400;
 	color: var(--main);
 	margin-right: 16px;
 }
@@ -58,7 +55,6 @@
 	margin-bottom: 60px;
 }
 .description {
-	font-weight: 400;
 	margin-bottom: 60px;
 }
 
@@ -95,4 +91,14 @@
 	height: 5px;
 	width: 100%;
 	background-color: var(--button);
+}
+.featuresReviewsForm__box {
+	display: flex;
+	justify-content: space-between;
+}
+.featuresReviews {
+	width: 631px;
+}
+.form {
+	width: 641px;
 }

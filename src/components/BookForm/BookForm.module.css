@@ -1,0 +1,6 @@
+.BookForm {
+	border: 1px solid var(--gray-light);
+	border-radius: 10px;
+	padding: 44px 57px;
+	min-height: 588px;
+}

@@ -36,7 +36,7 @@ export default function LocationForm() {
 				width="20"
 				height="20"
 			>
-				<use href={`${icons}#map-black`} />
+				<use href={`${icons}#map`} />
 			</svg>
 		</form>
 	);

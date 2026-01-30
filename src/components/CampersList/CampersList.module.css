@@ -25,4 +25,9 @@
 	letter-spacing: -0.01em;
 	color: var(--main);
 	user-select: none;
+	transition: border-color;
+	background-color: var(--white);
+}
+.loadMoreBtn:hover {
+	border-color: var(--button-hover);
 }

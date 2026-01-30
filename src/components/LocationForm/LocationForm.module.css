@@ -6,17 +6,11 @@
 	margin-bottom: 40px;
 }
 .location_label {
-	font-weight: 400;
-	font-size: 16px;
-	line-height: 1.5;
 	color: var(--gray);
 }
 .location_input {
 	border-radius: 12px;
 	padding: 16px 0 16px 48px;
-	font-weight: 400;
-	font-size: 16px;
-	line-height: 1.5;
 	background-color: var(--inputs);
 	border: none;
 	outline: none;

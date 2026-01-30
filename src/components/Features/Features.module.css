@@ -1,7 +1,11 @@
 .features__box {
+	min-height: 588px;
 	border-radius: 10px;
-	padding: 44px 80px;
-	background: var(--inputs);
+	padding: 44px 52px;
+	background-color: var(--inputs);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 .features__list {
 	display: flex;
@@ -21,8 +25,11 @@
 	fill: var(--main);
 	mix-blend-mode: multiply;
 }
+.features__text {
+	font-weight: 500;
+}
 
-.details__h3 {
+.details__header {
 	position: relative;
 	margin-bottom: 48px;
 	font-weight: 600;
@@ -30,7 +37,7 @@
 	line-height: 1.2;
 	color: var(--main);
 }
-.details__h3::after {
+.details__header::after {
 	content: "";
 	position: absolute;
 	left: 0;
@@ -47,7 +54,4 @@
 .details__item {
 	display: flex;
 	justify-content: space-between;
-}
-.details__info {
-	text-transform: capitalize;
 }

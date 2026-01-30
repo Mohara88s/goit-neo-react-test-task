@@ -2,6 +2,7 @@ import { NavLink, Outlet } from "react-router-dom";
 import icons from "../../assets/icons/sprite.svg";
 import clsx from "clsx";
 import style from "./CamperDetails.module.css";
+import BookForm from "../BookForm/BookForm";
 
 const getActiveClassNames = ({ isActive }) => clsx(isActive && style.active);
 
@@ -13,13 +14,13 @@ export default function CamperDetails({ camper }) {
 			<h2 className={style.name}>{name}</h2>
 			<div className={style.ratebox}>
 				<svg width="16" height="16" className={style.ratebox__icon}>
-					<use href={`${icons}#star-yellow`} />
+					<use href={`${icons}#star`} />
 				</svg>
 				<p className={style.ratebox__rate}>
 					{rating} ({reviews ? reviews.length : 0} Reviews)
 				</p>
 				<svg width="20" height="20" className={style.ratebox__icon}>
-					<use href={`${icons}#map-black`} />
+					<use href={`${icons}#map`} />
 				</svg>
 				<p className={style.ratebox__info}>{location}</p>
 			</div>
@@ -56,7 +57,14 @@ export default function CamperDetails({ camper }) {
 					</NavLink>
 				</li>
 			</ul>
-			<Outlet context={camper} />
+			<div className={style.featuresReviewsForm__box}>
+				<div className={style.featuresReviews}>
+					<Outlet context={camper} />
+				</div>
+				<div className={style.form}>
+					<BookForm></BookForm>
+				</div>
+			</div>
 		</>
 	);
 }

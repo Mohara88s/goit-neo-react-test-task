@@ -41,20 +41,20 @@ export default function CamperCard({ camper }) {
 								isFavorite && style.active__favorite__icon,
 							)}
 						>
-							<use href={`${icons}#heart-black`} />
+							<use href={`${icons}#heart`} />
 						</svg>
 					</div>
 				</div>
 
 				<div className={style.card__ratebox}>
 					<svg width="16" height="16" className={style.card__ratebox__icon}>
-						<use href={`${icons}#star-yellow`} />
+						<use href={`${icons}#star`} />
 					</svg>
 					<p className={style.card__ratebox__info}>
 						{rating} ({reviews.length} Reviews)
 					</p>
 					<svg width="20" height="20" className={style.card__ratebox__icon}>
-						<use href={`${icons}#map-black`} />
+						<use href={`${icons}#map`} />
 					</svg>
 					<p className={style.card__ratebox__info}>{location}</p>
 				</div>

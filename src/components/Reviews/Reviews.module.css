@@ -1,0 +1,47 @@
+.reviews__box {
+	padding-top: 12px;
+}
+.reviews__list {
+	display: flex;
+	flex-direction: column;
+	gap: 44px;
+}
+.review__box {
+	display: flex;
+	gap: 16px;
+	align-items: center;
+	margin-bottom: 16px;
+}
+.reviewer__badge {
+	border-radius: 60px;
+	width: 60px;
+	height: 60px;
+	background-color: var(--badges);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.reviewer__char {
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 1.33;
+	color: var(--button);
+}
+.star__active {
+	fill: var(--rating);
+}
+.star {
+	fill: var(--badges);
+}
+.reviewer_name {
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.5;
+	color: var(--main);
+	margin-bottom: 4px;
+}
+.review__rate {
+	display: flex;
+	gap: 4px;
+	line-height: 0.5;
+}
