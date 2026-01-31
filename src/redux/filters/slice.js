@@ -10,6 +10,7 @@ const filtersSlice = createSlice({
             location: "",
             equipment: [],
             type: null,
+            visibleCount: 4,
         }
     },
     reducers: {
@@ -30,9 +31,13 @@ const filtersSlice = createSlice({
             state.applied.location = state.location;
             state.applied.equipment = [...state.equipment];
             state.applied.type = state.type;
-        }
+            state.applied.visibleCount = 4;
+        },
+        addVisibleCount: (state) => {
+            state.applied.visibleCount += 4;
+        },
     },
 });
 
-export const { changeLocation, toggleEquipment, changeType, setAppliedFilters } = filtersSlice.actions;
+export const { changeLocation, toggleEquipment, changeType, setAppliedFilters, addVisibleCount } = filtersSlice.actions;
 export const filtersReducer = filtersSlice.reducer;

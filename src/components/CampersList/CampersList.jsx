@@ -1,31 +1,28 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import {
 	selectFilteredCampers,
 	selectLoading,
 } from "../../redux/campers/selectors";
+import { selectAppliedFilters } from "../../redux/filters/selectors";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchCampers } from "../../redux/campers/operations";
+import { addVisibleCount } from "../../redux/filters/slice";
 import CamperCard from "../CamperCard/CamperCard";
 import { ClipLoader } from "react-spinners";
 import style from "./CampersList.module.css";
 
 export default function CampersList() {
 	const dispatch = useDispatch();
-	const [visibleCount, setVisibleCount] = useState(4);
-
 	const campers = useSelector(selectFilteredCampers);
 	const loading = useSelector(selectLoading);
+	const { visibleCount } = useSelector(selectAppliedFilters);
 
 	useEffect(() => {
 		dispatch(fetchCampers());
 	}, [dispatch]);
 
-	const handleLoadMore = () => {
-		setVisibleCount((prevCount) => prevCount + 4);
-	};
-
 	const visibleCampers = campers.slice(0, visibleCount);
-	const moreAvailable = visibleCount < campers.length;
+	const moreCampersAvailable = visibleCount < campers.length;
 
 	return (
 		<div className={style.campers__box}>
@@ -47,11 +44,11 @@ export default function CampersList() {
 							);
 						})}
 					</ul>
-					{moreAvailable && (
+					{moreCampersAvailable && (
 						<button
 							type="button"
 							className={style.loadMoreBtn}
-							onClick={handleLoadMore}
+							onClick={() => dispatch(addVisibleCount())}
 						>
 							Load more
 						</button>

@@ -1,5 +1,4 @@
 import { useDispatch } from "react-redux";
-
 import { setAppliedFilters } from "../../redux/filters/slice";
 import EquipmentFilter from "../EquipmentFilter/EquipmentFilter";
 import LocationForm from "../LocationForm/LocationForm";
@@ -8,7 +7,6 @@ import style from "./FiltersBox.module.css";
 
 export default function FiltersBox() {
 	const dispatch = useDispatch();
-
 	const handleSearch = () => {
 		dispatch(setAppliedFilters());
 	};
