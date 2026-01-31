@@ -1,24 +1,24 @@
 .card {
-	width: 888px;
+	width: 440px;
 	padding: 24px;
 	background-color: var(--white);
 	border: 1px solid var(--gray-light);
 	border-radius: 20px;
 	display: flex;
 	gap: 24px;
+	flex-direction: column;
 }
 
 .card__img {
 	border-radius: 10px;
-	width: 292px;
-	/* height: 320px; */
+	width: 100%;
 	object-fit: cover;
 	object-position: center;
 }
 .card__info {
 	display: flex;
 	flex-direction: column;
-	width: 524px;
+	width: 392px;
 }
 .card__namebox {
 	display: flex;
@@ -106,4 +106,14 @@
 .card__link:hover,
 .card__link:focus {
 	background-color: var(--button-hover);
+}
+
+@media screen and (min-width: 1440px) {
+	.card {
+		width: 888px;
+		flex-direction: row;
+	}
+	.card__img {
+		width: 292px;
+	}
 }
