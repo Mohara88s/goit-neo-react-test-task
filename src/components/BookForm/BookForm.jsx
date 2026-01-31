@@ -114,6 +114,9 @@ export default function BookForm({ camperId }) {
 									className={style.BookForm__field}
 									dateFormat="dd.MM.yyyy"
 									minDate={new Date()}
+									formatWeekDay={(nameOfDay) =>
+										nameOfDay.toUpperCase().slice(0, 3)
+									}
 								/>
 							)}
 						</Field>

@@ -19,17 +19,122 @@
 	width: 100%;
 	margin-bottom: 14px;
 }
-.BookForm__item :global(.react-datepicker-wrapper) {
+:global(.react-datepicker-wrapper) {
 	width: 100%;
 }
 
-.BookForm__item :global(.react-datepicker__input-container) {
-	width: 100%;
+:global(.react-datepicker) {
+	border: 1px solid var(--text);
+	border-radius: 12px;
+	border-radius: 12px;
+	width: 276px;
+	height: 274px;
+}
+:global(.react-datepicker__triangle) {
+	display: none;
+}
+:global(.react-datepicker)::before {
+	content: "";
+	position: absolute;
+	top: -6px;
+	left: 135px;
+	width: 10px;
+	height: 10px;
+	background-color: var(--white);
+	border-left: 1px solid var(--text);
+	border-top: 1px solid var(--text);
+	transform: rotate(45deg);
+	z-index: 1;
+}
+:global(.react-datepicker__header) {
+	background-color: transparent;
+	border: none;
+	padding: 12px 0 0 0;
 }
 
-.BookForm__item :global(.react-datepicker__input-container) input {
-	width: 100%;
+:global(.react-datepicker__navigation) {
+	top: 8px;
 }
+:global(.react-datepicker__navigation--previous) {
+	left: 4px;
+}
+:global(.react-datepicker__navigation--next) {
+	right: 6px;
+}
+
+:global(.react-datepicker__navigation-icon--previous::before) {
+	border-color: var(--text);
+	border-width: 2px 2px 0 0;
+}
+
+:global(.react-datepicker__navigation-icon--next::before) {
+	border-color: var(--text);
+	border-width: 2px 2px 0 0;
+	right: 8px;
+}
+
+:global(.react-datepicker__navigation:hover span::before) {
+	border-color: var(--main);
+}
+:global(.react-datepicker__current-month) {
+	font-family: var(--font-family);
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 1.2;
+	color: var(--main);
+}
+
+:global(.react-datepicker__day-names) {
+	width: 275px;
+	padding: 12px;
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 1px solid var(--text);
+}
+
+:global(.react-datepicker__day-name) {
+	font-family: var(--font-family);
+	font-weight: 600;
+	font-size: 12px;
+	line-height: 1.2;
+	color: var(--text);
+}
+
+:global(.react-datepicker__month) {
+	margin: 8px 0 0 0;
+	padding: 12px 11px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 196px;
+}
+
+:global(.react-datepicker__day) {
+	width: 36px;
+	height: 32px;
+	padding-top: 8px;
+	margin: 0;
+	font-family: var(--font-family);
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 1.2;
+	color: var(--main);
+	border-radius: 32px !important;
+}
+:global(.react-datepicker__day:hover) {
+	background-color: var(--badges);
+}
+
+:global(.react-datepicker__day--selected),
+:global(.react-datepicker__day--keyboard-selected) {
+	background-color: var(--text) !important;
+	color: var(--white);
+}
+
+:global(.react-datepicker__day--disabled) {
+	color: var(--text);
+}
+
 .BookForm__field,
 .BookForm__commentField {
 	width: 100%;
