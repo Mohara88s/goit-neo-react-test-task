@@ -8,24 +8,9 @@
 	text-overflow: ellipsis;
 	margin-bottom: 8px;
 }
-.ratebox {
-	display: flex;
-	align-items: center;
+.rate__box {
 	margin-bottom: 16px;
 }
-.ratebox__icon {
-	margin-right: 4px;
-}
-.ratebox__rate {
-	color: var(--main);
-	margin-right: 16px;
-	text-decoration: underline;
-}
-.ratebox__info {
-	color: var(--main);
-	margin-right: 16px;
-}
-
 .price {
 	font-weight: 600;
 	font-size: 24px;

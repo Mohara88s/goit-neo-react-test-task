@@ -1,0 +1,16 @@
+.ratebox {
+	display: flex;
+	align-items: center;
+}
+.ratebox__icon {
+	margin-right: 4px;
+}
+.ratebox__rate {
+	color: var(--main);
+	margin-right: 16px;
+	text-decoration: underline;
+}
+.ratebox__info {
+	color: var(--main);
+	margin-right: 16px;
+}

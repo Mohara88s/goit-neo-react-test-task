@@ -55,18 +55,11 @@
 .active__favorite__icon {
 	fill: var(--button);
 }
-.card__ratebox {
-	display: flex;
-	align-items: center;
+
+.rate__box {
 	margin-bottom: 24px;
 }
-.card__ratebox__icon {
-	margin-right: 4px;
-}
-.card__ratebox__info {
-	color: var(--main);
-	margin-right: 16px;
-}
+
 .card__description {
 	white-space: nowrap;
 	overflow: hidden;

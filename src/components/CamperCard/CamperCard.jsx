@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { selectFavorites } from "../../redux/favorites/selectors";
 import { toggleFavorite } from "../../redux/favorites/slice";
 import { features } from "../../data/features";
+import Rate from "../Rate/Rate";
 import icons from "../../assets/icons/sprite.svg";
 import clsx from "clsx";
 import style from "./CamperCard.module.css";
@@ -10,8 +11,7 @@ import { Link } from "react-router-dom";
 export default function CamperCard({ camper }) {
 	const dispatch = useDispatch();
 
-	const { id, name, price, rating, reviews, location, description, gallery } =
-		camper;
+	const { id, name, price, description, gallery } = camper;
 
 	const favorites = useSelector(selectFavorites);
 	const isFavorite = Array.isArray(favorites) && favorites.includes(id);
@@ -46,17 +46,8 @@ export default function CamperCard({ camper }) {
 					</div>
 				</div>
 
-				<div className={style.card__ratebox}>
-					<svg width="16" height="16" className={style.card__ratebox__icon}>
-						<use href={`${icons}#star`} />
-					</svg>
-					<p className={style.card__ratebox__info}>
-						{rating} ({reviews.length} Reviews)
-					</p>
-					<svg width="20" height="20" className={style.card__ratebox__icon}>
-						<use href={`${icons}#map`} />
-					</svg>
-					<p className={style.card__ratebox__info}>{location}</p>
+				<div className={style.rate__box}>
+					<Rate camper={camper} />
 				</div>
 
 				<p className={style.card__description}>{description}</p>

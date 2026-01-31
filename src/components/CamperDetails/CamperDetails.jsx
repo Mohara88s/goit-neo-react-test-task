@@ -1,29 +1,21 @@
 import { NavLink, Outlet } from "react-router-dom";
-import icons from "../../assets/icons/sprite.svg";
+import BookForm from "../BookForm/BookForm";
+import Rate from "../Rate/Rate";
 import clsx from "clsx";
 import style from "./CamperDetails.module.css";
-import BookForm from "../BookForm/BookForm";
 
 const getActiveClassNames = ({ isActive }) => clsx(isActive && style.active);
 
 export default function CamperDetails({ camper }) {
-	const { id, name, rating, reviews, location, price, gallery, description } =
-		camper;
+	const { id, name, price, gallery, description } = camper;
 	return (
 		<>
 			<h2 className={style.name}>{name}</h2>
-			<div className={style.ratebox}>
-				<svg width="16" height="16" className={style.ratebox__icon}>
-					<use href={`${icons}#star`} />
-				</svg>
-				<p className={style.ratebox__rate}>
-					{rating} ({reviews ? reviews.length : 0} Reviews)
-				</p>
-				<svg width="20" height="20" className={style.ratebox__icon}>
-					<use href={`${icons}#map`} />
-				</svg>
-				<p className={style.ratebox__info}>{location}</p>
+
+			<div className={style.rate__box}>
+				<Rate camper={camper} />
 			</div>
+
 			<p className={style.price}>{`€${Number(price).toFixed(2)}`}</p>
 
 			{gallery.length > 0 ? (
