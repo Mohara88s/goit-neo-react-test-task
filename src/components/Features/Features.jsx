@@ -6,7 +6,6 @@ import style from "./Features.module.css";
 
 export default function Features() {
 	const camper = useOutletContext();
-	console.log(camper);
 	const formatDetailValue = (key, value) => {
 		if (typeof value !== "string") return value;
 

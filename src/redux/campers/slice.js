@@ -1,8 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { fetchCampers, fetchCamper } from './operations';
+import { fetchCampers, fetchCamper, bookCamper } from './operations';
 
 const handlePending = (state) => {
     state.loading = true;
+    state.error = null;
 };
 
 const handleRejected = (state, action) => {
@@ -15,8 +16,9 @@ const campersSlice = createSlice({
     initialState: {
         campers: [],
         currentCamper: null,
+        booking: null,
         loading: false,
-        error: null
+        error: null,
     },
     extraReducers: (builder) => {
         builder
@@ -35,6 +37,14 @@ const campersSlice = createSlice({
                 state.currentCamper = action.payload;
             })
             .addCase(fetchCamper.rejected, handleRejected)
+
+            .addCase(bookCamper.pending, handlePending)
+            .addCase(bookCamper.fulfilled, (state, action) => {
+                state.loading = false;
+                state.error = null;
+                state.booking = action.payload;
+            })
+            .addCase(bookCamper.rejected, handleRejected)
     },
 });
 

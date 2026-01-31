@@ -1,6 +1,9 @@
 @import "./assets/styles/fonts.css";
 
 :root {
+	/* fonts */
+	--font-family: "Inter", sans-serif;
+
 	/* colors */
 	--main: #101828;
 	--text: #475467;
@@ -18,7 +21,7 @@
 }
 
 body {
-	font-family: "Inter", sans-serif;
+	font-family: var(--font-family);
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 1.5;

@@ -10,12 +10,14 @@ import style from "./CamperDetailsPage.module.css";
 
 export default function CamperDetailsPage() {
 	const camper = useSelector(selectCurrentCamper);
+
 	const dispatch = useDispatch();
 	const { id } = useParams();
 
 	useEffect(() => {
 		dispatch(fetchCamper(id));
 	}, [dispatch, id]);
+
 	return (
 		<section className={style.section}>
 			<Container>{camper && <CamperDetails camper={camper} />}</Container>

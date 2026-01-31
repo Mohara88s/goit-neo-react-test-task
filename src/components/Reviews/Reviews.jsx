@@ -7,7 +7,6 @@ const totalStars = 5;
 
 export default function Reviews() {
 	const camper = useOutletContext();
-	console.log(camper.reviews);
 	return (
 		<div className={style.reviews__box}>
 			<ul className={style.reviews__list}>

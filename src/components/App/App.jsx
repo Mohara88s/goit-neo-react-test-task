@@ -1,6 +1,10 @@
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useEffect } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 import { ClipLoader } from "react-spinners";
+import { selectError } from "../../redux/campers/selectors";
+import { useSelector } from "react-redux";
+import toast from "react-hot-toast";
+import style from "./App.module.css";
 
 const Layout = lazy(() => import("../../layouts/Layout/Layout"));
 const HomePage = lazy(() => import("../../pages/HomePage/HomePage"));
@@ -16,16 +20,24 @@ const NotFoundPage = lazy(
 );
 
 export default function App() {
+	const error = useSelector(selectError);
+	useEffect(() => {
+		if (error) {
+			toast.error(`Error: ${error}`);
+		}
+	}, [error]);
 	return (
 		<>
 			<Suspense
 				fallback={
-					<ClipLoader
-						color="#e44848"
-						size={50}
-						aria-label="Loading Spinner"
-						data-testid="loader"
-					/>
+					<div className={style.loader_box}>
+						<ClipLoader
+							color="#e44848"
+							size={100}
+							aria-label="Loading Spinner"
+							data-testid="loader"
+						/>
+					</div>
 				}
 			>
 				<Routes>

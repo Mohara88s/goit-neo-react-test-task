@@ -7,7 +7,7 @@ import BookForm from "../BookForm/BookForm";
 const getActiveClassNames = ({ isActive }) => clsx(isActive && style.active);
 
 export default function CamperDetails({ camper }) {
-	const { name, rating, reviews, location, price, gallery, description } =
+	const { id, name, rating, reviews, location, price, gallery, description } =
 		camper;
 	return (
 		<>
@@ -62,7 +62,7 @@ export default function CamperDetails({ camper }) {
 					<Outlet context={camper} />
 				</div>
 				<div className={style.form}>
-					<BookForm></BookForm>
+					<BookForm camperId={id}></BookForm>
 				</div>
 			</div>
 		</>
