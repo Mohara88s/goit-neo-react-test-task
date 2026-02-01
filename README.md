@@ -1,16 +1,77 @@
-# React + Vite
+# "TravelTrucks" is the website of a company that rents campers.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This modern responsive site is for people who are interested in renting a
+camper.
 
-Currently, two official plugins are available:
+**Live Demo:**
+[https://traveltrucks-olive.vercel.app/](https://traveltrucks-olive.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## React Compiler
+- Fully responsive design (Mobile: 480px, Tablet: 768px, Desktop: 1440px)
+- Semantic HTML5 markup
+- Modular CSS architecture
+- Optimized images
+- Own-styled Datepicker
+- Using local-storage
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+## Technologies
 
-## Expanding the ESLint configuration
+- HTML5
+- CSS3 (Flexbox, CSS Variables)
+- modern-normalize
+- JavaScript
+- Axios
+- API
+- VSCode
+- Vite (build tool)
+- Figma
+- Git/GitHub
+- Prettier
+- React
+- React-redux
+- React-router-dom
+- Redux-persist
+- React-hot-toast
+- React-datepicker
+- Formik
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Installation
+
+```bash
+# Clone repository
+git clone https://github.com/Mohara88s/goit-neo-react-test-task.git
+cd goit-neo-react-test-task
+
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
+
+```
+
+## Project Structure
+
+```
+.
+├── public/            # Contains static image assets, fonts files, favicons, that are not processed by the build tool.
+├── src/               # Contains all source files for the project.
+│   ├── assets/        # Contains all static assets used in the project.
+|   |   ├── icons/     # Contains SVG sprite.
+|   |   └── styles/    # Contains fonts.css
+│   ├── components/    # Contains components.
+│   ├── layouts/       # Contains layouts.
+│   ├── pages/         # Contains pages.
+│   ├── redux/         # Contains redux.
+│   ├── index.css      # The base CSS.
+│   └── main.jsx       # The main entry point of jsx.
+├── .gitignore         # Specifies files and directories to ignore in version control.
+├── eslint.config.js   # Eslint configurations.
+├── index.html         # The main entry point of the application.
+├── package-lock.json   # The technical document that serves to record and ensure the determinism of project dependencies
+├── package.json       # Lists project dependencies and scripts.
+├── README.md          # Project overview and documentation.
+├── vercel.json        # Vercel configurations
+└── vite.config.js     # Configuration file for Vite build tool.
+```
