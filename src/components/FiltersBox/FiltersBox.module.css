@@ -1,5 +1,6 @@
 .filters__box {
 	width: 360px;
+	padding-top: 48px;
 }
 
 @media screen and (min-width: 1440px) {

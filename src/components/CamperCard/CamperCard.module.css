@@ -107,7 +107,14 @@
 .card__link:focus {
 	background-color: var(--button-hover);
 }
-
+@media screen and (min-width: 768px) {
+	.card {
+		width: 370px;
+	}
+	.card__info {
+		width: 322px;
+	}
+}
 @media screen and (min-width: 1440px) {
 	.card {
 		width: 888px;
@@ -115,5 +122,8 @@
 	}
 	.card__img {
 		width: 292px;
+	}
+	.card__info {
+		width: 524px;
 	}
 }
