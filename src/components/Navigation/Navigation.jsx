@@ -9,12 +9,21 @@ export const Navigation = () => {
 		<nav>
 			<ul className={style.nav_list}>
 				<li>
-					<NavLink className={getActiveClassNames} to="/">
+					<NavLink
+						className={getActiveClassNames}
+						to="/"
+						aria-label="to the main page"
+					>
 						Home
 					</NavLink>
 				</li>
 				<li>
-					<NavLink className={getActiveClassNames} to="/catalog" end>
+					<NavLink
+						className={getActiveClassNames}
+						to="/catalog"
+						end
+						aria-label="to the catalog page"
+					>
 						Catalog
 					</NavLink>
 				</li>

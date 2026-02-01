@@ -39,12 +39,20 @@ export default function CamperDetails({ camper }) {
 
 			<ul className={style.nav__list}>
 				<li className={style.nav__item}>
-					<NavLink className={getActiveClassNames} to="features">
+					<NavLink
+						className={getActiveClassNames}
+						to="features"
+						aria-label="to the campers features"
+					>
 						Features
 					</NavLink>
 				</li>
 				<li className={style.nav__item}>
-					<NavLink className={getActiveClassNames} to="reviews">
+					<NavLink
+						className={getActiveClassNames}
+						to="reviews"
+						aria-label="to the campers reviews"
+					>
 						Reviews
 					</NavLink>
 				</li>

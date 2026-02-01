@@ -16,6 +16,7 @@ export default function Rate({ camper }) {
 				to={targetLink}
 				target={isDetailsPage ? "_self" : "_blank"}
 				rel={isDetailsPage ? "" : "noopener noreferrer"}
+				aria-label="to the campers reviews"
 			>
 				<p className={style.ratebox__rate}>
 					{rating} ({reviews ? reviews.length : 0} Reviews)

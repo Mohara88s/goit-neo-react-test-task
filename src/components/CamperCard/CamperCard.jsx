@@ -71,6 +71,7 @@ export default function CamperCard({ camper }) {
 					to={`/catalog/${id}`}
 					target="_blank"
 					rel="noopener noreferrer"
+					aria-label="to the campers details page"
 					className={style.card__link}
 				>
 					Show more
