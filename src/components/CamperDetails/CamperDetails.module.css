@@ -101,7 +101,6 @@
 	}
 	.featuresReviewsForm__box {
 		flex-direction: row;
-		align-items: baseline;
 	}
 	.featuresReviews {
 		width: 631px;
